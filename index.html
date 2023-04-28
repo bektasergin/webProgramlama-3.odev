@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.Ödev</title>
+    <style>
+        @media screen and (max-width:769px) {
+            .siyah-kutu {
+                display: none;
+            }
+
+            .resim {
+                clear: both;
+                width: 500px;
+            }
+
+            .your_yani_resim {
+                margin-left: 300px;
+
+            }
+
+            .your {
+                display: inline;
+                margin-left: 50px;
+            }
+
+            .your_alti {
+                margin-left: 50px;
+            }
+
+            .box2 {
+                display: none;
+            }
+
+            .desktop-kismi{
+                display: none;
+            }
+        
+        }
+
+        @media screen and (min-width:769px) {
+            .tablet-yazi {
+                display: none;
+            }
+
+            .tablet-box2 {
+                display: none;
+            }
+
+            .tablet-icon {
+                display: none;
+            }
+
+            .tablet-logo-light {
+                display: none;
+            }
+            .tablet-kismi{
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:481px) {
+            .desktopvetablet-kismi {
+                display: none;
+            }
+            .tablet-kismi{
+                display: none;
+            }
+        }
+
+        @media screen and (min-width:481px) {
+            .telefon-kismi {
+                display: none;
+            }
+        }
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .box-black {
+            background-color: #151515;
+            display: inline-block;
+            width: 300px;
+            height: 500px;
+        }
+
+        .yazi {
+
+            display: inline-block;
+            font-size: 24px;
+            font-family: 'Lucida ', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: absolute;
+            margin-top: -148px;
+            margin-left: 350px;
+
+        }
+
+        .img {
+            display: inline-block;
+            width: 300px;
+            height: 500px;
+        }
+
+        .box2 {
+            align-items: flex-end;
+            background-color: #151515;
+            width: 100%;
+            height: 250px;
+        }
+
+        .tablet-box2 {
+            align-items: flex-end;
+            background-color: #151515;
+            width: 1300px;
+            height: 250px;
+        }
+
+        .tablet-logo-light {
+            width: 200px;
+            padding-top: 80px;
+            padding-left: 100px;
+            display: inline-block;
+        }
+
+        .tablet-aciklama {
+            color: white;
+            width: 50%;
+            padding-top: 80px;
+            padding-left: 50px;
+            font-size: 20px;
+            display: inline-block;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .tablet-icon {
+            color: white;
+            justify-content: flex-end;
+            padding-left: -1000px;
+            padding-right: 25px;
+            display: inline-block;
+
+        }
+
+        .logo-light {
+            width: 200px;
+            padding-top: 80px;
+            padding-left: 250px;
+            display: inline-block;
+        }
+
+        .aciklama {
+            color: white;
+            width: 50%;
+            padding-top: 80px;
+            padding-left: 300px;
+            font-size: 20px;
+            display: inline-block;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .icon {
+
+            color: white;
+            justify-content: flex-end;
+            padding-right: 25px;
+            display: inline-block;
+        }
+
+        .buton1:hover {
+            background-color: #D5966c;
+        }
+
+        .buton1 {
+            padding-top: 20px;
+            margin-left: 150px;
+            text-align: center;
+            width: 150px;
+            height: 40px;
+            background-color: #151515;
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .buton2:hover {
+            background-color: #151515;
+        }
+
+        .buton2 {
+            padding-top: 20px;
+            text-align: center;
+            width: 70px;
+            height: 40px;
+            background-color: #D5966c;
+            display: inline-block;
+            border: none;
+            text-decoration: none;
+            color: white;
+        }
+
+        .your {
+            font-size: 50px;
+            display: inline-block;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        .your_alti {
+            font-size: 20px;
+            display: inline-block;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .your_yani_resim {
+            width: 711px;
+            display: inline-block;
+
+        }
+
+        .grid-2 {
+            width: 700px;
+            height: 700px;
+            margin-left: 100px;
+        }
+
+        .grid-3 {
+            display: inline-block;
+            width: 450px;
+            height: 350px;
+        }
+
+        .gridin_orasi {
+            background-color: #151515;
+            width: 450px;
+            height: 350px;
+            margin-bottom: 150px;
+        }
+
+        .gridin_ici {
+            color: white;
+            padding-left: 35px;
+            padding-top: 25px;
+            font-size: 50px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .gridin_ici2 {
+            color: white;
+            padding-left: 35px;
+            padding-top: 25px;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .yarim-yarim {
+            background: linear-gradient(to right, white 78%, black 50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            font-size: 60px;
+            font-weight: bold;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            -webkit-background-clip: text;
+            /* Safari */
+            -webkit-text-fill-color: transparent;
+            /* Safari */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="desktop-kismi">
+
+        <div style="display: flex; align-items: center; ">
+            <div style="width: 47%; height: 650px; display: flex; position: relative">
+                <div class="siyah-kutu" style="background-color: #151515; width: 45%; height: 650px;">
+                    <p class="yarim-yarim" style="margin-top: 150px;padding-left: 24%;position: absolute;">
+                        MODERN <br>
+                        ART GALLERY
+
+                    </p>
+
+                </div>
+                <img class="resim" style="width: auto; height: 650px;" src="assets/desktop/image-hero.jpg"
+                    srcset="assets/desktop/image-hero@2x.jpg">
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin-left: -50px; margin-top: -50px;">
+
+                <div class="yazi" style="margin-bottom: 50px;">                   
+                    The arts in the collection of the <br />
+                    Modern Art Gallery all started from <br />
+                    a spark of inspiration. Will these <br />
+                    pieces inspire you? Visit us and find <br />
+                    out.
+                    
+                </div>
+
+                <div class="button-container" style="display: flex;position: absolute;margin-top: 50px;">
+                    <a class="buton1" href="index (2).html">OUR LOCATION</a>
+                    <a class="buton2" href="index (2).html">
+                        <img src="assets/icon-arrow-right.svg" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div style="display:flex;padding-top: 200px; ">
+            <div style="display: flex;
+            justify-content: start;
+            flex-direction: column;
+            width: 70%;">
+                <h3 class="your" style="display: flex;
+            justify-content: center;">YOUR DAY AT<br>THE GALLERY</h3>
+                <h4 class="your_alti" style="display: flex;
+            justify-content: center;">Wander through our distinct<br>collections and find new insights<br>about our
+                    artist. Dive into the<br>details of their creative process.</h4>
+            </div>
+            <div style="display:flex; justify-content: center; align-items: center;width: 100%;">
+                <img class="your_yani_resim" src="assets/desktop/image-grid-1.jpg"
+                    srcset="assets/desktop/image-grid-1@2x.jpg">
+            </div>
+        </div>
+
+        <div class="ortakisim2" style="display: flex;
+        padding-top: 40px;">
+            <img style="margin-left: 300px;" class="grid-2" src="assets/desktop/image-grid-2.jpg" srcset="assets/desktop/image-grid-2@2x.jpg">
+            <div style="padding-left: 50px;">
+                <img class="grid-3" src="assets/desktop/image-grid-3.jpg" srcset="assets/desktop/image-grid-3@2x.jpg">
+                <div class="gridin_orasi">
+                    <h2 class="gridin_ici">COME & BE INSPIRED</h2>
+                    <h1 class="gridin_ici2">We're excited to welcome you to our<br>gallery and see how our
+                        collections<br>influnce you.</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="box2">
+            <img class="logo-light" src="assets/logo-light.svg">
+            <p class="aciklama">
+                The Modern Art Gallery is free to all visitors and open <br>
+                seven days a week from 8am to 9pm. Find us at 99 <br>
+                King Street, Newport, USA.
+            </p>
+
+            <a class="icon" href="www.facebook.com"> <img src="assets/icon-facebook.svg"> </a>
+            <a class="icon" href="www.instagram.com"> <img src="assets/icon-instagram.svg"> </a>
+            <a class="icon" href="www.twitter.com"> <img src="assets/icon-twitter.svg"> </a>
+        </div>
+    
+    </div>
+
+    <div class="tablet-kismi">
+        <div style="display: flex; align-items: center; ">
+            
+            <img class="resim" style="width: 500px; height: 750px;" src="assets/tablet/image-hero.jpg"
+            srcset="assets/tablet/image-hero@2x.jpg">
+
+            
+            <div style="display: flex; flex-direction: column; align-items: center; margin-left: 50px; margin-top: 250px;">
+
+                <div class="yazi" style="margin-bottom: 50px;font-size: 29px;margin-left: 530px; margin-top: -150px;width: 700px;">                   
+                    The arts in the collection of the Modern Art <br> 
+                    Gallery all started from a spark of <br>
+                    inspiration. Will these pieces inspire you? <br>
+                    Visit us and find out.
+                    
+                </div>
+
+                <div class="tablet-yazi" style="margin-top: -330px;position: absolute;width: 100%;margin-left: 600px; font-size: 55px ;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                        <b>MODERN <br> ART GALLERY<br><br></b>
+                </div>
+    
+                <div class="button-container" style="display: flex;position: absolute;margin-top: 20px;margin-right:100px;">
+                    <a class="buton1" href="index (2).html">OUR LOCATION</a>
+                    <a class="buton2" href="index (2).html">
+                        <img src="assets/icon-arrow-right.svg" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div style="display:flex;padding-top: 200px; ">
+            <div style="display: flex;
+            justify-content: start;
+            flex-direction: column;
+            width: 70%;">
+                <h3 class="your" style="display: flex;
+            justify-content: center;margin-bottom: 80px;margin-top: 50px;">YOUR DAY AT<br>THE GALLERY</h3>
+                <h4 class="your_alti" style="display: flex;
+            justify-content: center;width: 350px;">Wander through our distinct<br>collections and find new insights<br>about our
+                    artist. Dive into the<br>details of their creative process.</h4>
+            </div>
+            <div style="display:flex; justify-content: center; align-items: center;width: 100%;">
+                <img style="margin-left: 40px;height: 500px;" class="your_yani_resim" src="assets/tablet/image-grid-1.jpg"
+                    srcset="assets/tablet/image-grid-1@2x.jpg">
+            </div>
+        </div>
+
+        <div class="ortakisim2" style="display: flex; padding-top: 40px;">
+            <img style="margin-left: 200px;height: 800px;" src="assets/tablet/image-grid-2.jpg" srcset="assets/tablet/image-grid-2@2x.jpg">
+            <div style="padding-left: 50px;">
+                <img style="height: 450px;" class="grid-3" src="assets/tablet/image-grid-3.jpg" srcset="assets/tablet/image-grid-3@2x.jpg">
+                <div class="gridin_orasi">
+                    <h2 class="gridin_ici">COME & BE INSPIRED</h2>
+                    <h1 class="gridin_ici2">We're excited to welcome you to our<br>gallery and see how our
+                        collections<br>influnce you.</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="tablet-box2">
+            <img class="tablet-logo-light" src="assets/logo-light.svg">
+            <p class="tablet-aciklama">
+                The Modern Art Gallery is free to all visitors and open <br>
+                seven days a week from 8am to 9pm. Find us at 99 <br>
+                King Street, Newport, USA.
+            </p>
+
+            <a class="tablet-icon" href="www.facebook.com"> <img src="assets/icon-facebook.svg"> </a>
+            <a class="tablet-icon" href="www.instagram.com"> <img src="assets/icon-instagram.svg"> </a>
+            <a class="tablet-icon" href="www.twitter.com"> <img src="assets/icon-twitter.svg"> </a>
+        </div>
+        
+    </div>
+
+    <div class="telefon-kismi">
+        <img style="width: 100%;" src="assets/mobile/image-hero.jpg" srcset="assets/mobile/image-hero@2x.jpg">
+        <p
+            style="margin-left: 15px;font-size: 50px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            <b>MODERN<br>ART GALLERY</b>
+        </p>
+
+        <div style="display: flex; flex-direction: column; align-items: center; margin-top: 50px;"></div>
+        <div
+            style="font-size: 20px;margin-left: 15px;margin-bottom: 50px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+
+            The arts in the collection of the <br />
+            Modern Art Gallery all started from <br />
+            a spark of inspiration. Will these <br />
+            pieces inspire you? Visit us and find <br />
+            out.
+        </div>
+        <div class="button-container" style="display: flex; padding-left: -100px;">
+            <a style="margin-left: 15px;" class="buton1" href="index (2).html">OUR LOCATION</a>
+            <a class="buton2" href="index (2).html">
+                <img src="assets/icon-arrow-right.svg" />
+            </a>
+        </div>
+
+        <img style="width: 100%; margin-top: 50px;" src="assets/mobile/image-grid-1.jpg"
+            srcset="assets/mobile/image-grid-1@2x.jpg">
+        <h3 style="margin-left: 15px;font-size: 40px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;""><b>YOUR DAY<br>AT THE GALLERY</b></h3>
+        <h4 style=" margin-bottom: 50px;margin-left: 15px;font-size: 20px;font-family: 'Lucida Sans'
+            , 'Lucida Sans Regular' , 'Lucida Grande' , 'Lucida Sans Unicode' , Geneva, Verdana, sans-serif;">Wander
+            through our distinct<br>collections and find new insights<br>about our artist. Dive into the<br>details of
+            their creative process.</h4>
+
+            <img style="width: 100%;" src="assets/mobile/image-grid-2.jpg" srcset="assets/mobile/image-grid-2@2x.jpg">
+
+            <img style="margin-bottom: -15px;margin-top: 15px ;width: 100%;" src="assets/mobile/image-grid-3.jpg"
+                srcset="assets/mobile/image-grid-3@2x.jpg">
+
+            <div style="margin-top: 35px;margin-bottom: 125px;color: white;height: 400px;width: 100%;background-color: #151515;">
+                <p
+                    style="padding-left: 35px;
+                padding-top: 50px;
+                font-size: 50px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    <b>COME & BE<br>INSPIRED</b>
+                </p>
+                <p style="padding-left: 35px;
+            padding-top: 25px;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"">
+                <b>
+                    We're excited to welcome you to our<br>gallery and see how our
+                    collections<br>influnce you.
+                </b>
+            </p>
+        </div>
+        
+        <div style=" width: 100%; height: 400px; background-color: #151515;">
+                    <img style="padding-top: 50px;padding-left: 25px;width: 150px;" src="assets/logo-light.svg">
+
+                <p
+                    style="color: white;
+                padding-top: 40px;
+                padding-left: 25px;
+                font-size: 19px;                
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    The Modern Art Gallery is free to all visitors <br> and open
+                    seven days a week from 8am to <br> 9pm. Find us at 99
+                    King Street, Newport, <br> USA.
+                </p>
+                <div style="margin-top: 50px;margin-left: 25px;">
+                    <a class="tablet-icon" href="www.facebook.com"> <img src="assets/icon-facebook.svg"> </a>
+                    <a class="tablet-icon" href="www.instagram.com"> <img src="assets/icon-instagram.svg"> </a>
+                    <a class="tablet-icon" href="www.twitter.com"> <img src="assets/icon-twitter.svg"> </a>
+                </div>
+            </div>
+
+    </div>
+</body>
+
+</html>

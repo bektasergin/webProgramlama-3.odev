@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.Ödev</title>
+    <style>
+        @media screen and (max-width:768px) {
+            .desktop-location {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            .tablet-location {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:481px) {
+            .tablet-location {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width:481px) {
+            .phone-location {
+                display: none;
+            }
+        }
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .map {
+            width: 100%;
+
+
+        }
+
+        .kara {
+            width: 100%;
+            height: 400px;
+            background-color: #151515;
+
+        }
+
+        .turuncu {
+            width: 100%;
+            height: 200px;
+            background-color: #D5966c;
+
+        }
+
+        .buton3:hover {
+            background-color: #D5966c;
+        }
+
+        .buton3 {
+            padding-top: 20px;
+            text-align: center;
+            width: 150px;
+            height: 40px;
+            background-color: #151515;
+            display: inline-block;
+            border: none;
+            text-decoration: none;
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .buton4:hover {
+            background-color: #151515;
+        }
+
+        .buton4 {
+            padding-top: 20px;
+            text-align: center;
+            width: 70px;
+            height: 40px;
+            background-color: #D5966c;
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+        }
+
+        .dark-light {
+            width: 200px;
+            padding-top: 50px;
+            padding-left: 250px;
+            display: inline-block;
+        }
+
+        .aciklama1 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #151515;
+            width: 50%;
+            padding-top: 50px;
+            padding-left: 200px;
+            font-size: 20px;
+
+        }
+
+        .icon1 {
+            color: #151515;
+            justify-content: flex-end;
+            padding-right: 25px;
+            padding-top: 50px;
+            display: inline-block;
+        }
+
+        .icon2 {
+            color: #151515;
+            justify-content: flex-end;
+            padding-right: 10px;
+            padding-left: 25px;
+            padding-top: 20px;
+            display: inline-block;
+        }
+
+        .icon3 {
+            color: #151515;
+            justify-content: flex-end;
+            padding-right: 10px;
+            margin-top: 20px;
+            padding-left: 35px;
+            padding-top: 20px;
+            display: inline-block;
+            padding-bottom: 50px;
+
+        }
+
+        .aciklama2 {
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 50px;
+            padding-left: 15%;
+            padding-top: 100px;
+            display: inline-block;
+        }
+
+        .cadde {
+            color: #D5966c;
+            font-size: 35px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .cadde_aciklama {
+            color: white;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="desktop-location">
+        <div class="button-container" style="position: relative; display: flex;">
+            <img class="map" src="assets/desktop/image-map.png" srcset="assets/desktop/image-map@2x.png">
+            <a class="buton4" href="index.html"
+                style="position: absolute;margin-left: 150px;margin-top: 30px; transform: translate(-2%, -50%);"><img
+                    src="assets/icon-arrow-left.svg"></a>
+            <a class="buton3" href="index.html"
+                style="position: absolute; margin-top: 30px; margin-left: 210px; transform: translate(2%, -50%);">BACK
+                TO HOME</a>
+        </div>
+        <div class="kara" style="display: flex; flex-direction: row;">
+            <p class="aciklama2">
+                <b>OUR<br>LOCATION</b>
+            </p>
+            <div style="display: flex; flex-direction: column;margin-left: 25%;">
+                <p style="margin-top: 30px;" class="cadde">99 KING STREET</p>
+                <P class="cadde_aciklama">
+                    Newport <br>
+                    Rl 02840 <br>
+                    United States of America <br><br>
+                    Our newly opened gallery is located near the Edward <br>
+                    King House on 99 King Street, the Modern Art Gallery is <br>
+                    free all Visitors and open seven days a week from <br>
+                    8am to 9pm.
+                </P>
+            </div>
+        </div>
+        <div class="turuncu">
+
+            <div style="display: flex; align-items: center;">
+                <img class="dark-light" src="assets/logo-dark.svg">
+                <p class="aciklama1" style="margin-left: 20px;">
+                    The Modern Art Gallery is free to all visitors and open <br>
+                    seven days a week from 8am to 9pm. Find us at 99 <br>
+                    King Street, Newport, USA.
+                </p>
+                <div style="display: flex; align-items: center; margin-left: 20px;">
+                    <a class="icon1" href="www.facebook.com"> <img src="assets/icon-facebook.svg"> </a>
+                    <a class="icon1" href="www.instagram.com"> <img src="assets/icon-instagram.svg"> </a>
+                    <a class="icon1" href="www.twitter.com"> <img src="assets/icon-twitter.svg"> </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="tablet-location">
+        <div class="button-container" style="position: relative; display: flex;">
+            <img class="map" src="assets/tablet/image-map.png" srcset="assets/tablet/image-map@2x.png">
+            <a class="buton4" href="index.html"
+                style="position: absolute;margin-left: 40px;margin-top: 30px; transform: translate(-2%, -50%);"><img
+                    src="assets/icon-arrow-left.svg"></a>
+            <a class="buton3" href="index.html"
+                style="position: absolute; margin-top: 30px; margin-left: 100px; transform: translate(2%, -50%);">BACK
+                TO HOME</a>
+        </div>
+        <div class="kara" style="display: flex; flex-direction: row;">
+            <p
+                style="color: white;font-size: 40px; padding-left: 50px;padding-top: 40px;;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                <b>OUR<br>LOCATION</b>
+            </p>
+            <div style="display: flex; flex-direction: column;margin-left: 10%;">
+                <p class="cadde" style="font-size: 25px;padding-top: 30px;">99 KING STREET</p>
+                <P class="cadde_aciklama" style="font-size: 16px;">
+                    Newport <br>
+                    Rl 02840 <br>
+                    United States of America <br><br>
+                    Our newly opened gallery is located near the <br> Edward
+                    King House on 99 King Street, the Modern <br> Art Gallery is
+                    free all Visitors and open seven <br> days a week from
+                    8am to 9pm.
+                </P>
+            </div>
+        </div>
+
+        <div style="background-color: #D5966c;width: 100%;height: 200px;">
+
+            <div style="display: flex; align-items: center;">
+                <img style="display: inline-block; padding-top: 5px; padding-left: 5%; height: auto;"
+                    src="assets/logo-dark.svg">
+
+                <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                          color: #151515;
+                          width: 50%;
+                          padding-top: 30px;
+                          padding-left: 5%;
+                          display: flex;
+                          font-size: 20px;">
+                    The Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us
+                    at 99 King Street, Newport, USA.
+                </p>
+
+                <a class="icon2" href="www.facebook.com"> <img src="assets/icon-facebook.svg"> </a>
+                <a class="icon2" href="www.instagram.com"> <img src="assets/icon-instagram.svg"> </a>
+                <a class="icon2" href="www.twitter.com"> <img src="assets/icon-twitter.svg"> </a>
+            </div>
+
+        </div>
+    </div>
+    <div class="phone-location">
+        <div style="position: relative; display: flex;">
+            <img class="map" src="assets/mobile/image-map.png" srcset="assets/mobile/image-map.png">
+            <a class="buton4" href="index.html"
+                style="position: absolute;margin-top: 30px; transform: translate(-2%, -50%);"><img
+                    src="assets/icon-arrow-left.svg"></a>
+            <a class="buton3" href="index.html"
+                style="position: absolute; margin-top: 30px; margin-left: 65px; transform: translate(2%, -50%);">BACK TO
+                HOME</a>
+        </div>
+
+        <div class="kara" style="display: inline-block;">
+            <p
+                style="color: white;font-size: 50px; padding-left: 30px;padding-top: 40px;;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                <b>OUR LOCATION</b>
+            </p>
+            <div style="display: flex; flex-direction: column;margin-left: 35px;">
+                <p
+                    style="color: #D5966c;
+                    font-size: 35px;
+                    margin-top: -1px;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;">
+                    99 KING STREET
+                </p>
+                <P
+                    style="color: white;
+                    font-size: 20px;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    Newport <br>
+                    Rl 02840 <br>
+                    United States of America <br><br>
+                    Our newly opened gallery is located near the Edward
+                    King House on 99 King Street, the Modern Art Gallery is
+                    free all Visitors and open seven days a week from
+                    8am to 9pm.
+                </P>
+            </div>
+        </div>
+
+        <div style="background-color: #D5966c;width: 100%;height: 100%;">
+
+
+            <img style="display: inline-block; padding-top: 50px; padding-left: 30px; width: 150px;"
+                src="assets/logo-dark.svg">
+
+            <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: #151515;                
+                padding-top: 30px;
+                padding-left: 30px;                
+                font-size: 20px;">
+                The Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us
+                at 99 King Street, Newport, USA.
+            </p>
+
+            <a class="icon3" href="www.facebook.com"> <img src="assets/icon-facebook.svg"> </a>
+            <a class="icon3" href="www.instagram.com"> <img src="assets/icon-instagram.svg"> </a>
+            <a class="icon3" href="www.twitter.com"> <img src="assets/icon-twitter.svg"> </a>
+
+        </div>
+    </div>
+</body>
+
+</html>
